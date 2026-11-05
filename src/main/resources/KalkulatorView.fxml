@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="330.0" prefWidth="420.0" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KalkulatorController">
+    
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Judul -->
+    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="KALKULATOR KONVERSI SATUAN PANJANG" />
+
+    <!-- Input Angka -->
+    <TextField fx:id="inputNilai" maxWidth="319.0" prefHeight="25.0" prefWidth="319.0" promptText="Masukkan nilai angka..." />
+
+    <!-- Pilihan Satuan (Dari -> Ke) -->
+    <HBox alignment="CENTER" spacing="10.0">
+        <Label text="Asal Satuan :" />
+        <ComboBox fx:id="comboAsal" prefWidth="100.0" />
+        <Label text="Ke :" />
+        <ComboBox fx:id="comboTujuan" prefWidth="100.0" />
+    </HBox>
+
+    <!-- Tombol Aksi -->
+    <HBox alignment="CENTER" spacing="15.0">
+        <Button onAction="#handleKonversi" prefWidth="90.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;" text="Konversi" />
+      <Label prefHeight="17.0" prefWidth="113.0" />
+        <Button onAction="#handleReset" prefWidth="90.0" text="Reset" />
+    </HBox>
+
+    <!-- Output Hasil -->
+    <Label fx:id="labelHasil" style="-fx-font-size: 13px;" />
+   <Label prefHeight="17.0" prefWidth="399.0" text="By : Saddad Nadzir Hizbaiyl (2502968) - MKB 3A" textFill="#6e6d6d">
+      <font>
+         <Font name="Californian FB" size="12.0" />
+      </font>
+   </Label>
+
+</VBox>
